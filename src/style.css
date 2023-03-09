@@ -1,0 +1,23 @@
+.container {
+  margin: 20px 0;
+}
+
+.city {
+  font-size: 40px;
+}
+.weather-app-wrapper {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: rgba(234, 135, 168, 60%);
+}
+
+.current-weather-section {
+  padding: 20px;
+  margin: 0 auto;
+}
+
+.forecast-section {
+  padding: 20px;
+}

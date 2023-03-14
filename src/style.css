@@ -28,6 +28,10 @@ sup {
   margin: -4px;
 }
 
+.weather-description {
+  text-transform: capitalize;
+}
+
 .forecast-section {
   padding: 20px;
 }

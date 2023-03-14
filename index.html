@@ -10,17 +10,19 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="stylesheet" href="src/style.css" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
       crossorigin="anonymous"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Public+Sans&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Public+Sans&family=Sono:wght@300&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="src/style.css" />
     <script
       src="https://kit.fontawesome.com/42e199c7b9.js"
       crossorigin="anonymous"
@@ -28,30 +30,21 @@
     <title>Weather App</title>
   </head>
   <body>
-    <div class="container">
-      <div class="weather-app-wrapper">
+    <div class="container whole-page">
+      <div class="weather-app-widget">
         <div class="current-weather-section">
           <div class="row">
             <div class="col">
-              <h1>Current city</h1>
-            </div>
-            <div class="col">
-              <div class="city-search">
-                <form>
-                  <input type="text" id="city-text" placeholder="Enter city" />
-                  <input type="submit" value="Search" class="search-button" />
-                </form>
-              </div>
+              <h1>City Name</h1>
             </div>
             <div class="row">
               <div class="col">Day 1 and time</div>
             </div>
             <div class="row">
-              <div class="col weather-icon rain">
-                <i class="fa-solid fa-cloud-rain"></i>Current weather icon
-              </div>
-              <div class="col">
-                <div class="current-temperature">Current Temperature</div>
+              <div class="col-3 weather-icon">Weather icon</div>
+              <div class="col-9">
+                <span class="current-temperature">19</span>
+                <sup>°C|F</sup>
                 <div class="weather-description">Description</div>
               </div>
               <div class="col"></div>
@@ -96,15 +89,21 @@
             <div class="col" class="temperature">5°</div>
           </div>
         </div>
-        <small>
-          <a
-            href="https://github.com/tashi1990/weather-app-final"
-            target="_blank"
-            >Open source code</a
-          >
-          by Tashi Petter
-        </small>
       </div>
+
+      <div class="search-engine">
+        <form>
+          <input type="text" id="city-text" placeholder="Enter city" />
+          <input type="submit" value="Search" class="search-button" />
+        </form>
+      </div>
+      <small>
+        <a href="https://github.com/tashi1990/weather-app-final" target="_blank"
+          ><br />
+          Open source code</a
+        >
+        by Tashi Petter
+      </small>
     </div>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"

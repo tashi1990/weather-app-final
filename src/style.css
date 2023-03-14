@@ -1,14 +1,11 @@
-.container {
-  margin: 20px 0;
+.whole-page {
+  font-family: "Sono", sans-serif;
+  padding: 40px;
 }
 
-.city {
-  font-size: 40px;
-}
-.weather-app-wrapper {
+.weather-app-widget {
   max-width: 600px;
   margin: 0 auto;
-  padding: 20px;
   border-radius: 10px;
   background-color: rgba(234, 135, 168, 60%);
 }
@@ -18,6 +15,31 @@
   margin: 0 auto;
 }
 
+.current-temperature {
+  font-size: 40px;
+}
+
+h1 {
+  font-size: 40px;
+}
+
+sup {
+  top: -1.25em;
+  margin: -4px;
+}
+
 .forecast-section {
   padding: 20px;
+}
+
+.search-engine {
+  max-width: 600px;
+  padding: 20px 0px 20px 0px;
+  margin: 0 auto;
+}
+
+small {
+  max-width: 600px;
+  display: block;
+  margin: 0 auto;
 }

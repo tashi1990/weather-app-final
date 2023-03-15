@@ -44,9 +44,18 @@ function displayData(response) {
   );
 }
 
-let apiKey = `24boa6cedt6f70a95aa73af3f70e5464`;
-let city = "London";
-let units = "metric";
-let apiURL = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=${units}`;
+function search(city) {
+  let apiKey = `24boa6cedt6f70a95aa73af3f70e5464`;
+  let units = "metric";
+  let apiURL = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=${units}`;
+  axios.get(apiURL).then(displayData);
+}
 
-axios.get(apiURL).then(displayData);
+function handleSubmit(event) {
+  event.preventDefault();
+  let cityInputElement = document.querySelector("#city-input");
+  search(cityInputElement.value);
+}
+
+let form = document.querySelector("#search-engine");
+form.addEventListener("submit", handleSubmit);

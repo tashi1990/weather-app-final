@@ -28,7 +28,7 @@ h1 {
 }
 
 sup {
-  top: -1.25em;
+  top: -2em;
   margin: -4px;
 }
 
@@ -55,4 +55,21 @@ small {
   max-width: 600px;
   display: block;
   margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.active {
+  color: black;
+  cursor: default;
+}
+
+.active:hover {
+  text-decoration: none;
 }

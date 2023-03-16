@@ -1,5 +1,4 @@
 function formatDate(timestamp) {
-  console.log(timestamp);
   let date = new Date(timestamp);
   let hours = date.getHours();
   if (hours < 10) {
@@ -23,7 +22,6 @@ function formatDate(timestamp) {
 }
 
 function displayData(response) {
-  console.log(response.data.condition.description);
   let temperatureElement = document.querySelector("#current-temperature");
   let cityElement = document.querySelector("#city");
   let descriptionElement = document.querySelector("#description");
@@ -76,7 +74,6 @@ function displayFahrenheitTemperature(event) {
   celsiusLink.classList.remove("active");
   fahrenheitLink.classList.add("active");
   let fahrenheitTemperature = convertCelsiusToFahrenheit(celsiusTemperature);
-  console.log(fahrenheitTemperature);
   temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
 }
 
@@ -93,6 +90,13 @@ fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
 let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", displayCelsiusTemperature);
 
-//let temperature = document.querySelector("#current-temperature");
-//search(CURRENT-LOCATION) - need to remember how to do this
-search("London");
+//N.B. Need to work out how to display current location info when opening, using the following geolocation tool:
+
+//function handlePosition(position) {
+//console.log(position.coords.latitude);
+//console.log(position.coords.longitude);
+//}
+
+//navigator.geolocation.getCurrentPosition(handlePosition);
+
+search("Berlin");

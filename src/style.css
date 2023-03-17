@@ -73,3 +73,23 @@ a:hover {
 .active:hover {
   text-decoration: none;
 }
+
+.weather-forecast-section {
+  padding: 20px;
+}
+
+.weather-forecast {
+  text-align: center;
+}
+
+.forecast-icon {
+  max-width: 100%;
+}
+
+.weather-forecast-temperatures {
+  font-size: 13px;
+}
+
+.weather-forecast-min {
+  opacity: 0.5;
+}

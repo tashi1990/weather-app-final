@@ -21,8 +21,16 @@ function formatDate(timestamp) {
   return `${day} ${hours}:${minutes}`;
 }
 
-function displayForecast() {
-  console.log("hello");
+function getForecast(city) {
+  let apiKey = `24boa6cedt6f70a95aa73af3f70e5464`;
+  let units = "metric";
+  let apiURL = `https://api.shecodes.io/weather/v1/forecast?query={${city}}&key=${apiKey}&units=${units}`;
+  console.log(apiURL);
+  axios.get(apiURL).then(displayForecast);
+}
+
+function displayForecast(response) {
+  console.log(response.data);
   let forecastElement = document.querySelector("#forecast");
 
   let forecastHTML = `<div class="row">`;
@@ -60,6 +68,7 @@ function displayCurrentWeather(response) {
   let mainIconElement = document.querySelector("#main-icon");
 
   celsiusTemperature = Math.round(response.data.temperature.current);
+  getForecast(city);
 
   temperatureElement.innerHTML = Math.round(celsiusTemperature);
   cityElement.innerHTML = response.data.city;
@@ -128,5 +137,5 @@ celsiusLink.addEventListener("click", displayCelsiusTemperature);
 
 //navigator.geolocation.getCurrentPosition(handlePosition);
 
-search("Berlin");
-displayForecast();
+let city = "Berlin";
+search(city);

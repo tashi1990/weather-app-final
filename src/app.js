@@ -21,7 +21,36 @@ function formatDate(timestamp) {
   return `${day} ${hours}:${minutes}`;
 }
 
-function displayData(response) {
+function displayForecast() {
+  console.log("hello");
+  let forecastElement = document.querySelector("#forecast");
+
+  let forecastHTML = `<div class="row">`;
+  let days = ["Tues", "Wed", "Thur", "Fri", "Sat"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+            <div class="col-2 text-center weather-forecast">
+              <div class="weather-forecast-day">${day}</div>
+              <img
+                src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/few-clouds-day.png"
+                id="forecast-icon"
+                class="forecast-icon"
+              />
+              <div class="weather-forecast-temperatures">
+                <span class="weather-forecast-max">18°</span
+                ><span class="weather-forecast-min">10°</span>
+              </div>
+            </div>
+`;
+  });
+
+  forecastHTML = forecastHTML + `</div`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
+function displayCurrentWeather(response) {
   let temperatureElement = document.querySelector("#current-temperature");
   let cityElement = document.querySelector("#city");
   let descriptionElement = document.querySelector("#description");
@@ -48,7 +77,7 @@ function search(city) {
   let apiKey = `24boa6cedt6f70a95aa73af3f70e5464`;
   let units = "metric";
   let apiURL = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=${units}`;
-  axios.get(apiURL).then(displayData);
+  axios.get(apiURL).then(displayCurrentWeather);
 }
 
 function handleSubmit(event) {
@@ -100,3 +129,4 @@ celsiusLink.addEventListener("click", displayCelsiusTemperature);
 //navigator.geolocation.getCurrentPosition(handlePosition);
 
 search("Berlin");
+displayForecast();

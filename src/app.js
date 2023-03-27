@@ -54,11 +54,13 @@ function displayForecast(response) {
               <div class="weather-forecast-day">${formatDay(
                 dayForecast.time
               )}</div>
-              <img
-                src="media/${dayForecast.condition.icon}.png"
-                id="forecast-icon"
-                class="forecast-icon"
-              />
+              <div class="icon-container">
+                <img
+                  src="media/${dayForecast.condition.icon}.png"
+                  id="forecast-icon"
+                  class="forecast-icon"
+                />
+              </div>
               <div class="weather-forecast-temperatures">
                 <span class="weather-forecast-max">${Math.round(
                   dayForecast.temperature.maximum

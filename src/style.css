@@ -88,6 +88,12 @@ a:hover {
   padding: 10px;
 }
 
+.icon-container {
+  min-height: 80px;
+  display: flex;
+  align-items: center;
+}
+
 .weather-forecast-temperatures {
   font-size: 13px;
 }

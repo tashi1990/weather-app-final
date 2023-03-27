@@ -55,9 +55,7 @@ function displayForecast(response) {
                 dayForecast.time
               )}</div>
               <img
-                src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${
-                  dayForecast.condition.icon
-                }.png"
+                src="media/${dayForecast.condition.icon}.png"
                 id="forecast-icon"
                 class="forecast-icon"
               />
@@ -98,7 +96,7 @@ function displayCurrentWeather(response) {
   dateElement.innerHTML = formatDate(response.data.time * 1000);
   mainIconElement.setAttribute(
     "src",
-    `http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${response.data.condition.icon}.png`
+    `media/${response.data.condition.icon}.png`
   );
 }
 

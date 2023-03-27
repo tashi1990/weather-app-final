@@ -22,6 +22,7 @@
 
 .main-icon {
   width: 150px;
+  padding-top: 30px;
 }
 h1 {
   font-size: 40px;
@@ -84,6 +85,7 @@ a:hover {
 
 .forecast-icon {
   max-width: 100%;
+  padding: 10px;
 }
 
 .weather-forecast-temperatures {

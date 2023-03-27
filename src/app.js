@@ -33,12 +33,10 @@ function getForecast(city) {
   let apiKey = `24boa6cedt6f70a95aa73af3f70e5464`;
   let units = "metric";
   let apiURL = `https://api.shecodes.io/weather/v1/forecast?query={${city}}&key=${apiKey}&units=${units}`;
-  console.log(apiURL);
   axios.get(apiURL).then(displayForecast);
 }
 
 function displayForecast(response) {
-  console.log(response.data.daily);
   let forecast = response.data.daily;
 
   let forecastElement = document.querySelector("#forecast");
@@ -122,7 +120,6 @@ form.addEventListener("submit", handleSubmit);
 function convertCelsiusToFahrenheit(tempInCelsius) {
   let fahrenheitTemperature = tempInCelsius * (9 / 5) + 32;
   return Math.round(fahrenheitTemperature);
-  console.log(fahrenheitTemperature);
 }
 
 let celsiusTemperature = null;
@@ -148,15 +145,6 @@ fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
 
 let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", displayCelsiusTemperature);
-
-//N.B. Need to work out how to display current location info when opening, using the following geolocation tool:
-
-//function handlePosition(position) {
-//console.log(position.coords.latitude);
-//console.log(position.coords.longitude);
-//}
-
-//navigator.geolocation.getCurrentPosition(handlePosition);
 
 let city = "Berlin";
 search(city);
